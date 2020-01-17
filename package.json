@@ -1,0 +1,29 @@
+{
+  "name": "mecca-piano",
+  "version": "1.0.0",
+  "description": "The Music Education, Composition, Creation Application",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/porkostomus/mecca-piano.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/porkostomus/mecca-piano/issues"
+  },
+  "homepage": "https://github.com/porkostomus/mecca-piano#readme",
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "shadow-cljs": "^2.8.83"
+  }
+}
