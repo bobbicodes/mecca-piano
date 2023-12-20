@@ -278,3 +278,7 @@ clj꞉user꞉> 
 clj꞉user꞉> 
 ; [:app] Build completed. (185 files, 2 compiled, 0 warnings, 0.22s)
 clj꞉user꞉> 
+; [:app] Compiling ...
+clj꞉user꞉> 
+; [:app] Build completed. (185 files, 2 compiled, 0 warnings, 0.29s)
+clj꞉user꞉> 

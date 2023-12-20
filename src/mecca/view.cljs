@@ -120,7 +120,7 @@
        (svg-paths megaman/cloud1 -64 0 0.15)
        (svg-paths megaman/cloud1 128 0 0.15)
        (svg-paths megaman/airman 150 1 0.2)
-       (svg-paths megaman/megaman1 0 48 0.2)
+       ;(svg-paths megaman/megaman1 0 48 0.2)
        (svg-paths megaman/roll 20 48 0.2)
        [:g [editor/block 28 30]
         [editor/triforce 30.47 0.88 0.072]]
