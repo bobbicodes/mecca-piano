@@ -266,3 +266,15 @@ nil
 clj꞉user꞉> 
 ; Jack-in done.
 clj꞉user꞉> 
+; [:app] Compiling ...
+clj꞉user꞉> 
+; [:app] Build completed. (185 files, 2 compiled, 0 warnings, 0.31s)
+clj꞉user꞉> 
+; [:app] Compiling ...
+clj꞉user꞉> 
+; [:app] Build completed. (185 files, 2 compiled, 0 warnings, 0.30s)
+clj꞉user꞉> 
+; [:app] Compiling ...
+clj꞉user꞉> 
+; [:app] Build completed. (185 files, 2 compiled, 0 warnings, 0.22s)
+clj꞉user꞉> 
