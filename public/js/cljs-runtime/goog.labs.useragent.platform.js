@@ -1,131 +1,141 @@
-goog.provide("goog.labs.userAgent.platform");
-goog.require("goog.labs.userAgent.util");
-goog.require("goog.string");
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isAndroid = function() {
-  return goog.labs.userAgent.util.matchUserAgent("Android");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isIpod = function() {
-  return goog.labs.userAgent.util.matchUserAgent("iPod");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isIphone = function() {
-  return goog.labs.userAgent.util.matchUserAgent("iPhone") && !goog.labs.userAgent.util.matchUserAgent("iPod") && !goog.labs.userAgent.util.matchUserAgent("iPad");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isIpad = function() {
-  return goog.labs.userAgent.util.matchUserAgent("iPad");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isIos = function() {
-  return goog.labs.userAgent.platform.isIphone() || goog.labs.userAgent.platform.isIpad() || goog.labs.userAgent.platform.isIpod();
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isMacintosh = function() {
-  return goog.labs.userAgent.util.matchUserAgent("Macintosh");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isLinux = function() {
-  return goog.labs.userAgent.util.matchUserAgent("Linux");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isWindows = function() {
-  return goog.labs.userAgent.util.matchUserAgent("Windows");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isChromeOS = function() {
-  return goog.labs.userAgent.util.matchUserAgent("CrOS");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isChromecast = function() {
-  return goog.labs.userAgent.util.matchUserAgent("CrKey");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isKaiOS = function() {
-  return goog.labs.userAgent.util.matchUserAgentIgnoreCase("KaiOS");
-};
-/**
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isGo2Phone = function() {
-  return goog.labs.userAgent.util.matchUserAgentIgnoreCase("GAFP");
-};
-/**
- * @return {string}
- */
-goog.labs.userAgent.platform.getVersion = function() {
-  var userAgentString = goog.labs.userAgent.util.getUserAgent();
-  var version = "", re;
-  if (goog.labs.userAgent.platform.isWindows()) {
-    re = /Windows (?:NT|Phone) ([0-9.]+)/;
-    var match = re.exec(userAgentString);
-    if (match) {
-      version = match[1];
-    } else {
-      version = "0.0";
+goog.loadModule(function(exports) {
+  function useUserAgentDataPlatform(ignoreClientHintsFlag = false) {
+    if (util.ASSUME_CLIENT_HINTS_SUPPORT) {
+      return true;
     }
-  } else {
-    if (goog.labs.userAgent.platform.isIos()) {
-      re = /(?:iPhone|iPod|iPad|CPU)\s+OS\s+(\S+)/;
-      var match = re.exec(userAgentString);
-      version = match && match[1].replace(/_/g, ".");
-    } else {
-      if (goog.labs.userAgent.platform.isMacintosh()) {
-        re = /Mac OS X ([0-9_.]+)/;
-        var match = re.exec(userAgentString);
-        version = match ? match[1].replace(/_/g, ".") : "10";
+    if (!ignoreClientHintsFlag && !useClientHints()) {
+      return false;
+    }
+    const userAgentData = util.getUserAgentData();
+    return !!userAgentData && !!userAgentData.platform;
+  }
+  function isAndroid() {
+    if (useUserAgentDataPlatform()) {
+      return util.getUserAgentData().platform === "Android";
+    }
+    return util.matchUserAgent("Android");
+  }
+  function isIpod() {
+    return util.matchUserAgent("iPod");
+  }
+  function isIphone() {
+    return util.matchUserAgent("iPhone") && !util.matchUserAgent("iPod") && !util.matchUserAgent("iPad");
+  }
+  function isIpad() {
+    return util.matchUserAgent("iPad");
+  }
+  function isIos() {
+    return isIphone() || isIpad() || isIpod();
+  }
+  function isMacintosh() {
+    if (useUserAgentDataPlatform()) {
+      return util.getUserAgentData().platform === "macOS";
+    }
+    return util.matchUserAgent("Macintosh");
+  }
+  function isLinux() {
+    if (useUserAgentDataPlatform()) {
+      return util.getUserAgentData().platform === "Linux";
+    }
+    return util.matchUserAgent("Linux");
+  }
+  function isWindows() {
+    if (useUserAgentDataPlatform()) {
+      return util.getUserAgentData().platform === "Windows";
+    }
+    return util.matchUserAgent("Windows");
+  }
+  function isChromeOS() {
+    if (useUserAgentDataPlatform()) {
+      return util.getUserAgentData().platform === "Chrome OS";
+    }
+    return util.matchUserAgent("CrOS");
+  }
+  function isChromecast() {
+    return util.matchUserAgent("CrKey");
+  }
+  function isKaiOS() {
+    return util.matchUserAgentIgnoreCase("KaiOS");
+  }
+  function getVersion() {
+    const userAgentString = util.getUserAgent();
+    let version = "";
+    let re;
+    if (isWindows()) {
+      re = /Windows (?:NT|Phone) ([0-9.]+)/;
+      const match = re.exec(userAgentString);
+      if (match) {
+        version = match[1];
       } else {
-        if (goog.labs.userAgent.platform.isKaiOS()) {
-          re = /(?:KaiOS)\/(\S+)/i;
-          var match = re.exec(userAgentString);
-          version = match && match[1];
-        } else {
-          if (goog.labs.userAgent.platform.isAndroid()) {
-            re = /Android\s+([^\);]+)(\)|;)/;
-            var match = re.exec(userAgentString);
-            version = match && match[1];
-          } else {
-            if (goog.labs.userAgent.platform.isChromeOS()) {
-              re = /(?:CrOS\s+(?:i686|x86_64)\s+([0-9.]+))/;
-              var match = re.exec(userAgentString);
-              version = match && match[1];
-            }
-          }
+        version = "0.0";
+      }
+    } else if (isIos()) {
+      re = /(?:iPhone|iPod|iPad|CPU)\s+OS\s+(\S+)/;
+      const match = re.exec(userAgentString);
+      version = match && match[1].replace(/_/g, ".");
+    } else if (isMacintosh()) {
+      re = /Mac OS X ([0-9_.]+)/;
+      const match = re.exec(userAgentString);
+      version = match ? match[1].replace(/_/g, ".") : "10";
+    } else if (isKaiOS()) {
+      re = /(?:KaiOS)\/(\S+)/i;
+      const match = re.exec(userAgentString);
+      version = match && match[1];
+    } else if (isAndroid()) {
+      re = /Android\s+([^\);]+)(\)|;)/;
+      const match = re.exec(userAgentString);
+      version = match && match[1];
+    } else if (isChromeOS()) {
+      re = /(?:CrOS\s+(?:i686|x86_64)\s+([0-9.]+))/;
+      const match = re.exec(userAgentString);
+      version = match && match[1];
+    }
+    return version || "";
+  }
+  function isVersionOrHigher(version) {
+    return googString.compareVersions(getVersion(), version) >= 0;
+  }
+  "use strict";
+  goog.module("goog.labs.userAgent.platform");
+  goog.module.declareLegacyNamespace();
+  const googString = goog.require("goog.string.internal");
+  const util = goog.require("goog.labs.userAgent.util");
+  const {AsyncValue, Version} = goog.require("goog.labs.userAgent.highEntropy.highEntropyValue");
+  const {platformVersion} = goog.require("goog.labs.userAgent.highEntropy.highEntropyData");
+  const {useClientHints} = goog.require("goog.labs.userAgent");
+  class PlatformVersion {
+    constructor() {
+      this.preUachHasLoaded_ = false;
+    }
+    getIfLoaded() {
+      if (useUserAgentDataPlatform(true)) {
+        const loadedPlatformVersion = platformVersion.getIfLoaded();
+        if (loadedPlatformVersion === undefined) {
+          return undefined;
         }
+        return new Version(loadedPlatformVersion);
+      } else if (!this.preUachHasLoaded_) {
+        return undefined;
+      } else {
+        return new Version(getVersion());
       }
     }
+    async load() {
+      if (useUserAgentDataPlatform(true)) {
+        return new Version(await platformVersion.load());
+      } else {
+        this.preUachHasLoaded_ = true;
+        return new Version(getVersion());
+      }
+    }
+    resetForTesting() {
+      platformVersion.resetForTesting();
+      this.preUachHasLoaded_ = false;
+    }
   }
-  return version || "";
-};
-/**
- * @param {(string|number)} version
- * @return {boolean}
- */
-goog.labs.userAgent.platform.isVersionOrHigher = function(version) {
-  return goog.string.compareVersions(goog.labs.userAgent.platform.getVersion(), version) >= 0;
-};
+  const version = new PlatformVersion();
+  exports = {getVersion, isAndroid, isChromeOS, isChromecast, isIos, isIpad, isIphone, isIpod, isKaiOS, isLinux, isMacintosh, isVersionOrHigher, isWindows, version};
+  return exports;
+});
 
 //# sourceMappingURL=goog.labs.useragent.platform.js.map

@@ -1,0 +1,268 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd c:\Users\porko\Documents\GitHub\mecca-piano & npx.cmd shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app & popd
+; Using host:port localhost:50889 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
+clj꞉shadow.user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+; Please start your ClojureScript app (load it in the browser, or whatever is appropriate) so that Calva can connect to its REPL...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Timed out waiting for Shadow CLJS runtimes, pretending we are connected.
+; Connected session: cljs, repl: :app
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.cljs'
+
+; No application has connected to the REPL server. Make sure your JS environment has loaded your compiled ClojureScript code.
+cljs꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+cljs꞉user꞉> 
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd c:\Users\porko\Documents\GitHub\mecca-piano & npx.cmd shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app & popd
+; Using host:port localhost:51006 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉shadow.user꞉> 
+clj꞉shadow.user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+; Please start your ClojureScript app (load it in the browser, or whatever is appropriate) so that Calva can connect to its REPL...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Connected session: cljs, repl: :app
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.cljs'
+nil
+cljs꞉cljs.user꞉> 
+; Jack-in done.
+cljs꞉cljs.user꞉> 
+2
+{:sound 2, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/2.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+3
+{:sound 3, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/3.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+4
+{:sound 4, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/4.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+5
+{:sound 5, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/5.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+6
+{:sound 6, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/6.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+7
+{:sound 7, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/7.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+8
+{:sound 8, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/8.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+9
+{:sound 9, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/9.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+10
+{:sound 10, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/10.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+11
+{:sound 11, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/11.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+12
+{:sound 12, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/12.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+13
+{:sound 13, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/13.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+14
+{:sound 14, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/14.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+15
+{:sound 15, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/15.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+16
+{:sound 16, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/16.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+17
+{:sound 17, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/17.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+18
+{:sound 18, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/18.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+19
+{:sound 19, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/19.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+20
+{:sound 20, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/20.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+21
+{:sound 21, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/21.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+22
+{:sound 22, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/22.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+23
+{:sound 23, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/23.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+24
+{:sound 24, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/24.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+25
+{:sound 25, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/25.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+26
+{:sound 26, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/26.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+27
+{:sound 27, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/27.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+28
+{:sound 28, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/28.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+29
+{:sound 29, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/29.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+30
+{:sound 30, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/30.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+31
+{:sound 31, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/31.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+32
+{:sound 32, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/32.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+33
+{:sound 33, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/33.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+"Samples loaded"
+1
+{:sound 1, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/1.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+2
+{:sound 2, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/2.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+3
+{:sound 3, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/3.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+4
+{:sound 4, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/4.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+5
+{:sound 5, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/5.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+6
+{:sound 6, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/6.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+7
+{:sound 7, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/7.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+8
+{:sound 8, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/8.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+9
+{:sound 9, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/9.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+10
+{:sound 10, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/10.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+11
+{:sound 11, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/11.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+12
+{:sound 12, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/12.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+13
+{:sound 13, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/13.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+14
+{:sound 14, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/14.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+15
+{:sound 15, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/15.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+16
+{:sound 16, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/16.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+17
+{:sound 17, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/17.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+18
+{:sound 18, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/18.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+19
+{:sound 19, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/19.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+20
+{:sound 20, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/20.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+21
+{:sound 21, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/21.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+22
+{:sound 22, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/22.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+23
+{:sound 23, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/23.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+24
+{:sound 24, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/24.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+25
+{:sound 25, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/25.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+26
+{:sound 26, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/26.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+27
+{:sound 27, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/27.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+28
+{:sound 28, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/28.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+29
+{:sound 29, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/29.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+30
+{:sound 30, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/30.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+31
+{:sound 31, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/31.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+32
+{:sound 32, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/32.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+33
+{:sound 33, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/33.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+"Samples loaded"
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd c:\Users\porko\Documents\GitHub\mecca-piano & npx.cmd shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app & popd
+; Using host:port localhost:51403 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉shadow.user꞉> 
+clj꞉shadow.user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+; Please start your ClojureScript app (load it in the browser, or whatever is appropriate) so that Calva can connect to its REPL...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Waiting for Shadow CLJS runtimes, start your CLJS app...
+; Connected session: cljs, repl: :app
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.cljs'
+3
+{:sound 3, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/3.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+4
+{:sound 4, :decoded-buffer #object[AudioBuffer [object AudioBuffer]], :url "/audio/4.mp3", :buffer #object[ArrayBuffer [object ArrayBuffer]]}
+nil
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 

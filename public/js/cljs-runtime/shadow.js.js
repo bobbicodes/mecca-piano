@@ -1,16 +1,23 @@
 goog.provide("shadow.js");
-/** @dict */ shadow.js.files = {};
-/** @dict */ shadow.js.nativeRequires = {};
-/** @define {string} */ shadow.js.NODE_ENV = goog.define("shadow.js.NODE_ENV", "development");
+shadow.js.files = {};
+shadow.js.nativeProvides = {};
+shadow.js.NODE_ENV = goog.define("shadow.js.NODE_ENV", "development");
 shadow.js.requireStack = [];
-shadow.js.add_native_require = function(name, obj) {
-  shadow.js.nativeRequires[name] = obj;
+shadow.js.exportCopy = function(module, other) {
+  let copy = {};
+  let exports = module["exports"];
+  for (let key in other) {
+    if (key == "default" || key in exports || key in copy) {
+      continue;
+    }
+    copy[key] = {enumerable:true, get:function() {
+      return other[key];
+    }};
+  }
+  Object.defineProperties(exports, copy);
 };
-/**
- * @return {ShadowJS}
- */
 shadow.js.jsRequire = function(name, opts) {
-  var nativeObj = shadow.js.nativeRequires[name];
+  var nativeObj = shadow.js.nativeProvides[name];
   if (nativeObj !== undefined) {
     return nativeObj;
   }
@@ -37,12 +44,14 @@ shadow.js.jsRequire = function(name, opts) {
         moduleFn.call(module, goog.global, shadow.js.jsRequire, module, module["exports"]);
       } catch (e) {
         console.warn("shadow-cljs - failed to load", name);
+        console.error(e);
         throw e;
       }
       if (opts) {
         var globals = opts["globals"];
         if (globals) {
-          for (var i = 0; i < globals.length; i++) {
+          var i = 0;
+          for (; i < globals.length; i++) {
             window[globals[i]] = module["exports"];
           }
         }
@@ -53,7 +62,15 @@ shadow.js.jsRequire = function(name, opts) {
   }
   return module["exports"];
 };
-/** @dict */ shadow.js.modules = {};
+shadow.js.jsRequire["cache"] = {};
+shadow.js.jsRequire["resolve"] = function(name) {
+  return name;
+};
+shadow.js.jsRequire["exportCopy"] = shadow.js.exportCopy;
+shadow.js.jsRequire["esmDefault"] = function(mod) {
+  return mod && mod["__esModule"] ? mod : {"default":mod};
+};
+shadow.js.modules = {};
 shadow.js.require = function(name, opts) {
   return shadow.js.jsRequire(name, opts);
 };
